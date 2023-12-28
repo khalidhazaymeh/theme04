@@ -1,3 +1,7 @@
+*{
+   box-sizing: border-box;
+
+}
 body{
     font-family: 'Open Sans', sans-serif;
  }
@@ -7,11 +11,97 @@ ul{
 :root{
  --main-text--color:#FF9800;
 }
+/* Start Setting Box */
+.setting-box{
+   position: fixed;
+   left: -200PX;
+   top: 0;
+   background-color: white;
+   width: 200px;
+   min-height: 100vh;
+   z-index: 1000;
+   transition: 0.3s;
 
+
+   
+}
+.setting-box.open{
+   left: 0;
+}
+.setting-box  .tiggle-setting{
+   position: absolute;
+   right: -30PX;
+   top: 50px;
+   background-color: white;
+   
+   text-align: center;
+  
+   cursor: pointer;
+}
+.setting-box .setting-icon{
+font-size: 20px;
+width: 30PX;
+padding: 8PX 0;
+}
+.setting-box .setting-container .option-box{
+   padding: 15px;
+   text-align: center;
+   background-color: #eee;
+   margin: 10px;
+
+
+}
+.setting-box .setting-container .option-box h4{
+   margin: 0;
+   color: #666;
+
+}
+.setting-box .setting-container .option-box .colors-list{
+   list-style: none;
+   text-align: center;
+   padding: 0;
+   margin: 10px 0 0;
+
+}
+
+.setting-box .setting-container .option-box .colors-list li{
+width: 25px;
+height: 25px;
+background-color: black;
+border-radius: 50%;
+cursor: pointer;
+
+border: 2px solid #eee;
+display: inline-block;
+
+}
+
+.setting-box .setting-container .option-box .colors-list li:first-child{
+   background-color: #FF9800;
+}
+.setting-box .setting-container .option-box .colors-list li:nth-child(2){
+   background-color: #E91E63;
+}
+.setting-box .setting-container .option-box .colors-list li:nth-child(3){
+   background-color: #009688;
+}
+.setting-box .setting-container .option-box .colors-list li:nth-child(4){
+   background-color: #03A9F4;
+}
+.setting-box .setting-container .option-box .colors-list li:nth-child(5){
+   background-color: #4CAF50;
+}
+.setting-box .setting-container .option-box .colors-list li.active{
+ 
+   border: 3px solid black;
+}
+/* End Setting Box */
+/* ******************************************************** */
  /* Start Landing Page */
  .landing-page{
 min-height: 100vh;
-background-image: url(../img/bg_landing_1.jpg);
+background-image: url(../img/bg_landing_01.jpg);
+transition: 0.3s;
 background-size: cover;
 background-repeat: no-repeat;
 position: relative;
@@ -82,6 +172,7 @@ text-decoration: none;
     z-index: 2;
     color: white;
     text-align: center;
+    width: 80%;
  }
 
  .landing-page .introduction-text h1{
