@@ -134,6 +134,65 @@ opacity: 1;
 
 /* End Setting Box */
 /* ******************************************************** */
+/* Nav Bullets */
+.nav-bullets{
+   position: fixed;
+   right: 5px;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 40px;
+   z-index: 10;
+}
+.nav-bullets .bullet{
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   border: 3px solid var(--main-text--color);
+   cursor: pointer;
+   margin: 20px auto;
+   position: relative;
+
+  
+    
+}
+
+.nav-bullets .bullet:hover  .tooltip{
+   display: block;
+}
+
+.nav-bullets .bullet .tooltip{
+   background-color: var(--main-text--color);
+   color: white;
+   width: 130px;
+   padding: 8px 10px;
+   position: absolute;
+   right: 30px;
+   top: -10px;
+   text-align: center;
+   cursor: default;
+   pointer-events: none;
+   display: none;
+   transition: 0.3s;
+
+
+}
+
+.nav-bullets .bullet .tooltip::before{
+   content: "";
+border-style: solid;
+border-width: 10px;
+border-color: transparent transparent transparent var(--main-text--color);
+height: 0;
+width: 0;
+position: absolute;
+right: -18px;
+top: 50%;
+transform: translateY(-50%);
+
+
+}
+/* Nav Bullets */
+/* ******************************************************** */
  /* Start Landing Page */
  .landing-page{
 min-height: 100vh;
